@@ -67,18 +67,20 @@
         <div class="flex flex-col space-y-3">
           <p class="text-grayMed">Query Type</p>
           
-          <div id="radio-Wrapper" class="flex flex-col space-y-3 md:flex-row md:space-x-3 md:justify-center md:items-start md:space-y-0">
+          <div id="radio-Wrapper" class="flex flex-col space-y-3">
     
-            <label class="flex items-center space-x-3 px-6 py-3 border border-grayMed rounded-md w-full cursor-pointer has-[:checked]:bg-lightGreen has-[:checked]:border-greenDeep">
-              <input type="radio"  name="query" value="General Enquiry" class="w-5 h-5 accent-greenDeep cursor-pointer">
-              <p class="text-grayMed">General Enquiry</p>
-            </label>
+            <div class="flex flex-col space-y-3 md:flex-row md:space-x-3 md:justify-center md:items-start md:space-y-0">
+              
+              <label class="flex items-center space-x-3 px-6 py-3 border border-grayMed rounded-md w-full cursor-pointer has-[:checked]:bg-lightGreen has-[:checked]:border-greenDeep">
+                <input type="radio"  name="query" value="General Enquiry" class="w-5 h-5 accent-greenDeep cursor-pointer">
+                <p class="text-grayMed">General Enquiry</p>
+              </label>
+              <label class="flex items-center space-x-3 px-6 py-3 border border-grayMed rounded-md w-full cursor-pointer has-[:checked]:bg-lightGreen has-[:checked]:border-greenDeep">
+                <input type="radio"  name="query" value="Support Request" class="w-5 h-5 accent-greenDeep cursor-pointer">
+                <p class="text-grayMed">Support Request</p>
+              </label>
+            </div>
 
-
-            <label class="flex items-center space-x-3 px-6 py-3 border border-grayMed rounded-md w-full cursor-pointer has-[:checked]:bg-lightGreen has-[:checked]:border-greenDeep">
-              <input type="radio"  name="query" value="Support Request" class="w-5 h-5 accent-greenDeep cursor-pointer">
-              <p class="text-grayMed">Support Request</p>
-            </label>
             <p  class="hidden text-redDeep errorSign">  Please select a query type</p>
           </div>
         </div>
