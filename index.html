@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="src/output.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="bg-grayMed flex flex-col items-center justify-center min-h-screen">
+  <main id="main" class="relative ">
+
+    <div id="successMsg" class="hidden absolute top-1 left- bg-grayDep p-6 rounded-md z-50 md:left-20 md:top-5">
+      <div class="flex flex-row space-x-2">
+        <img src="assets/images/icon-success-check.svg" alt="icon">
+        <p class="font-bold text-white">
+          Message Sent!
+        </p>
+      </div>
+      <p class="text-grayMed font-bold">
+        Thanks for completing the form. We'll be in touch soon! 
+      </p>
+    </div>
+
+
+    <div class="relative container mx-auto bg-white p-6 rounded-md mt-24">
+      <form action="/upload" method="post" class="flex flex-col space-y-12">
+        <header>
+          <h2 class="text-3xl font-bold text-grayDep">
+            Contact Us
+          </h2>
+        </header>
+
+        <div class="flex flex-col space-y-12 md:flex-row  md:justify-center md:space-x-3 md:space-y-0">
+          <div >
+            <label for="firstName" class="text-grayMed text-base">
+              First Name
+            </label>
+            <input type="text" id="firstName" class="w-full border border-grayMed p-3 rounded-md cursor-pointer focus:outline-greenDeep hover:border hover:border-greenDeep">
+            <p class="hidden text-redDeep">This field is required</p>
+          </div>
+          <div >
+            <label for="lastName" class="text-grayMed text-base">
+              Last Name
+            </label>
+            <input type="text" id="lastName" class="w-full border border-grayMed p-3 rounded-md cursor-pointer focus:outline-greenDeep hover:border hover:border-greenDeep">
+            <p class="hidden text-redDeep">This field is required</p>
+          </div>
+        </div>
+
+        <div >
+          <label for="email" class="text-grayMed text-base">
+            Email Address
+          </label>
+          <input type="email" id="email" class="w-full border border-grayMed p-3 rounded-md cursor-pointer focus:outline-greenDeep hover:border hover:border-greenDeep">
+          <p class="hidden text-redDeep">Please enter a valid email address</p>
+        </div>
+
+        <div class="flex flex-col space-y-3">
+          <p class="text-grayMed">Query Type</p>
+          
+          <div id="radio-Wrapper" class="flex flex-col space-y-3 md:flex-row md:space-x-3 md:justify-center md:items-start md:space-y-0">
+    
+            <label class="flex items-center space-x-3 px-6 py-3 border border-grayMed rounded-md w-full cursor-pointer has-[:checked]:bg-lightGreen has-[:checked]:border-greenDeep">
+              <input type="radio"  name="query" value="General Enquiry" class="w-5 h-5 accent-greenDeep cursor-pointer">
+              <p class="text-grayMed">General Enquiry</p>
+            </label>
+
+
+            <label class="flex items-center space-x-3 px-6 py-3 border border-grayMed rounded-md w-full cursor-pointer has-[:checked]:bg-lightGreen has-[:checked]:border-greenDeep">
+              <input type="radio"  name="query" value="Support Request" class="w-5 h-5 accent-greenDeep cursor-pointer">
+              <p class="text-grayMed">Support Request</p>
+            </label>
+            <p  class="hidden text-redDeep errorSign">  Please select a query type</p>
+          </div>
+        </div>
+        
+        <div>
+          <label for="textArea" class="text-grayMed">
+            Message
+          </label>
+          <textarea name="text" id="textArea" class="border border-grayMed w-full h-32 p-3 rounded-md resize-none focus:outline-greenDeep"></textarea>
+          <p class="hidden text-redDeep">
+            This field is required
+          </p>
+        </div>
+
+        <div id="checkbox-wrapper">
+          <label class="flex flex-row space-x-3 text-grayMed">
+            <input type="checkbox" id="checkbox" name="agreement" value="yes" class="accent-greenDeep w-5 h-5" >
+            <p>I consent to being contacted by the team</p>
+          </label>
+          <p class="hidden text-redDeep errorSign">
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
+
+        <button id="btn" type="submit" class="w-full bg-greenDeep p-3 text-white font-bold rounded-md cursor-pointer hover:bg-green-900">
+          Submit
+        </button>
+      </form>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
